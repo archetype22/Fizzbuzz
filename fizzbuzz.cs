@@ -6,10 +6,10 @@ when the number is divisible by 5 return the word buzz
 when the number is divisible by both, return the word fizzbuzz
 
 
-public static string Fizzbuzz(int num)
+static string Fizzbuzz(int num)
 {
-   
-    if (num % 5 == 0&& num % 3 == 0)
+
+    if (num % 5 == 0 && num % 3 == 0)
     {
         return "fizzbuzz";
     }
@@ -22,8 +22,14 @@ public static string Fizzbuzz(int num)
     {
         return "buzz";
     }
-    else 
+    else
     {
-        return "errrrRor!"
+        return "errrrRor!";
     }
+
 }
+Console.WriteLine("Enter a number, preferrable divisible by 3 or 5..or both: ");
+var userInput = Console.ReadLine();
+var userInputParsed = int.Parse(userInput);
+Console.WriteLine();
+Console.WriteLine(Fizzbuzz(userInputParsed));
